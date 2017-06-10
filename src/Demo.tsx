@@ -8,14 +8,16 @@ interface DemoProps {
 const DemoComponent = (props: DemoProps & InjectedProps): JSX.Element => {
     return (
         <div>
-            {props.text}
-            {
-                props.clickCount > 5
-                    ? 'Easy there!'
-                    : 'Bring it!'
-            }
+            <p>{props.text}</p>
+            <p>
+                {
+                    props.clickCount >= 5
+                        ? 'Easy there!'
+                        : 'Bring it!'
+                }
+            </p>
         </div>
     );
 };
 
-export const Demo = clickCounted(true)(DemoComponent);
+export const Demo = clickCounted()(DemoComponent);
