@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 interface ExternalProps {
-    counterClassName?: string;
+    style?: React.CSSProperties;
 }
 
 interface State {
@@ -41,8 +41,8 @@ export const clickCounted = ({ debug = false }: Options = {}) =>
 
             render(): JSX.Element {
                 return (
-                    <div onClick={this.handleClick} style={{ backgroundColor: 'lightgreen' }}>
-                        <span className={this.props.counterClassName}>Clicked {this.state.clickCount} times</span>
+                    <div onClick={this.handleClick} style={this.props.style}>
+                        <span>Clicked {this.state.clickCount} times</span>
                         <Component {...this.props} {...this.state} />
                     </div>
                 );

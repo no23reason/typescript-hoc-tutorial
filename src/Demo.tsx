@@ -21,3 +21,4 @@ const DemoComponent = (props: DemoProps & InjectedProps): JSX.Element => {
 };
 
 export const Demo = clickCounted()(DemoComponent);
+export const DemoWithDebug = clickCounted({ debug: true })(DemoComponent);
