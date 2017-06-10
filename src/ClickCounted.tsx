@@ -4,11 +4,11 @@ interface ExternalProps {
     style?: React.CSSProperties;
 }
 
-interface State {
+export interface InjectedProps {
     clickCount: number;
 }
 
-export interface InjectedProps {
+interface State {
     clickCount: number;
 }
 
