@@ -1,14 +1,14 @@
 import * as React from 'react';
 
+interface State {
+    clickCount: number;
+}
+
 interface ExternalProps {
     style?: React.CSSProperties;
 }
 
 export interface InjectedProps {
-    clickCount: number;
-}
-
-interface State {
     clickCount: number;
 }
 
